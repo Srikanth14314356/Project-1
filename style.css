@@ -1,0 +1,155 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 10px;
+}
+
+/* Header & Navbar */
+.header {
+  background-color: #222;
+  color: white;
+  padding: 15px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Search Bar */
+.searchbar {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.searchbar input {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Titles */
+.Title, .Title2 {
+  text-align: center;
+  margin: 30px 0 10px;
+}
+
+/* Product Section */
+.product1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.box {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+
+.box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.box h3, .box h2 {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.price-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+del {
+  color: red;
+}
+
+/* About & Contact */
+.About, .Contact {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.About h2, .Contact h3 {
+  margin-bottom: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .searchbar input {
+    width: 90%;
+  }
+
+  .box img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .box h3, .box h2 {
+    font-size: 0.9rem;
+  }
+
+  .price-btn {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+
+  .box img {
+    height: 150px;
+  }
+}
